@@ -1,0 +1,90 @@
+.favorites {
+  background-color: rgb(28, 27, 27);
+  width: 30vw;
+  min-width: 350px;
+  padding: 10px;
+  min-height: calc(100vh - 554px);
+  &__subgroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.31);
+    &--subtitle {
+      padding-bottom: 10px;
+      font-weight: normal;
+      text-align: center;
+      color: white;
+    }
+  }
+  &__container {
+    list-style: none;
+    text-align: center;
+    overflow: scroll;
+    &--text {
+      margin-top: 10px;
+      color: gray;
+    }
+    &--card {
+      padding: 20px 20px 10px 20px;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.31);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.207);
+      }
+      & .img {
+        height: 150px;
+        width: 100px;
+      }
+      & .title {
+        color: white;
+        margin: 15px;
+        max-width: 120px;
+      }
+      & .esc {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: 2px solid white;
+        background-color: white;
+        & .icon {
+          font-size: 20px;
+        }
+        &:hover {
+          border: 2px solid rgb(88, 225, 223);
+          background-color: rgba(255, 255, 255, 0);
+          & .icon {
+            color: rgb(88, 225, 223);
+          }
+        }
+      }
+    }
+  }
+  &__btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &--delete {
+      height: 40px;
+      width: 200px;
+      border-radius: 30px;
+      background-color: rgba(88, 225, 223, 0);
+      border: 2px solid white;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 20px;
+      &:hover {
+        border: 2px solid rgb(88, 225, 223);
+        transform: scale(1.05);
+        color: rgb(88, 225, 223);
+        transition: border 0.7s ease, color 0.7s ease, transform 0.2s ease;
+      }
+    }
+  }
+}
+.hidden {
+  display: none;
+}

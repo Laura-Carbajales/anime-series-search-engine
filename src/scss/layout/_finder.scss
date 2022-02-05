@@ -1,0 +1,54 @@
+.finder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background-image: linear-gradient(to bottom, #000000a5 0%, #000000 100%),
+    url('../images/hero.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.31);
+  &__img {
+    height: 200px;
+  }
+  &__title {
+    color: rgb(88, 225, 223);
+    font-family: 'Shizuru', cursive;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  &__form {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    &--input {
+      height: 50px;
+      width: 500px;
+      border: none;
+      border-radius: 15px;
+      border: 2px solid rgb(88, 225, 223);
+      background-color: rgb(21, 21, 21);
+      color: white;
+      font-size: 16px;
+      padding-left: 15px;
+    }
+    &--btn {
+      height: 40px;
+      width: 100px;
+      border-radius: 30px;
+      background-color: rgba(88, 225, 223, 0);
+      border: 2px solid rgb(88, 225, 223);
+      color: rgb(88, 225, 223);
+      font-size: 16px;
+      font-weight: bold;
+      margin-left: 20px;
+      &:hover {
+        background-color: rgb(29, 29, 29);
+        transform: scale(1.05);
+        transition: background-color 0.7s ease, transform 0.2s ease;
+      }
+    }
+  }
+}
