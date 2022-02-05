@@ -20,12 +20,29 @@
     &--text {
       color: white;
     }
+
     &--card {
       margin: 10px;
       max-width: 200px;
       box-sizing: content-box;
       border-radius: 3px;
 
+      & .like {
+        height: 45px;
+        width: 45px;
+        background-color: black;
+        border: 2px solid rgb(88, 225, 223);
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        transform: translate(145px, 5px);
+        &__icon {
+          font-size: 20px;
+          color: rgb(88, 225, 223);
+        }
+      }
       & .img {
         width: 200px;
         height: 250px;
@@ -52,4 +69,10 @@
 }
 .favourite_border {
   border: 2px solid rgb(88, 225, 223);
+}
+.hidden {
+  display: none;
+}
+.hidden {
+  display: none;
 }

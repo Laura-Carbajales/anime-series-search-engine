@@ -29,15 +29,18 @@ function handleClickResults(event) {
 function renderCard(dataCard) {
   let articleClass = 'gray';
   let nameClass = 'gray';
+  let likeIconClass = 'hidden';
   const indexResult = favorites.findIndex((favorite) => dataCard.mal_id === favorite.id);
   if (indexResult !== -1) {
     articleClass = 'favourite_border';
     nameClass = 'favourite_color';
+    likeIconClass = 'like';
   }
   cardsSection.innerHTML += `
     <li class="results__container--card ${articleClass} js-card" data-name="${
     dataCard.title
   }" data-img="${dataCard.image_url}" data-id="${dataCard.mal_id}">
+  <div class="js-like ${likeIconClass}"><i class="like__icon fas fa-heart"></i></div>
     <img class="img"
         src="${dataCard.image_url || 'https://via.placeholder.com/200x250/ffffff/666666/?text=img'}"
         alt="caratula de la serie" />
@@ -73,6 +76,7 @@ function handleClickResetResults(event) {
 function handleClickCard(event) {
   const selectedCard = event.currentTarget;
   const name = selectedCard.querySelector('.js-name');
+  const likeIcon = selectedCard.querySelector('.js-like');
   const favoriteData = {
     name: selectedCard.dataset.name,
     url: selectedCard.dataset.img,
@@ -80,10 +84,13 @@ function handleClickCard(event) {
   };
   const indexResult = favorites.findIndex((favoriteCard) => favoriteCard.id === favoriteData.id);
   if (indexResult === -1) {
+    console.log(selectedCard);
     selectedCard.classList.remove('gray');
     selectedCard.classList.add('favourite_border');
     name.classList.remove('gray');
     name.classList.add('favourite_color');
+    likeIcon.classList.remove('hidden');
+    likeIcon.classList.add('like');
     favorites.push(favoriteData);
     renderAllFavorites(favorites);
     localStorage.setItem('favorites', JSON.stringify(favorites));
@@ -92,6 +99,8 @@ function handleClickCard(event) {
     selectedCard.classList.add('gray');
     name.classList.remove('favourite_color');
     name.classList.add('gray');
+    likeIcon.classList.remove('like');
+    likeIcon.classList.add('hidden');
     favorites.splice(indexResult, 1);
     renderAllFavorites(favorites);
     localStorage.setItem('favorites', JSON.stringify(favorites));
