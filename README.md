@@ -1,4 +1,4 @@
-<h1>Rock, Paper or Scissors</h1>
+<h1>Anime series search engine</h1>
 
 <details>
   <summary>Table of Contents</summary>
@@ -26,9 +26,7 @@
 
 [View the project](https://laura-carbajales.github.io/anime-series-search-engine/)
 
-This project consists of a fun game of "Rock, paper, scissors".
-You can select your play and you will have 10 attempts to beat it.
-You can try it as many times as you want!
+...
 
 ---
 
