@@ -17,15 +17,26 @@
     font-family: 'Shizuru', cursive;
     font-size: 40px;
     margin-bottom: 20px;
+    max-width: 400px;
+    text-align: center;
+    @media (min-width: 768px) {
+      max-width: 600px;
+    }
   }
   &__form {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
     &--input {
       height: 50px;
-      width: 500px;
+      width: 300px;
       border: none;
       border-radius: 15px;
       border: 2px solid rgb(88, 225, 223);
@@ -33,6 +44,13 @@
       color: white;
       font-size: 16px;
       padding-left: 15px;
+      @media (min-width: 768px) {
+        width: 500px;
+      }
+    }
+    &--container {
+      @media (min-width: 768px) {
+      }
     }
     &--btn {
       height: 40px;
@@ -43,7 +61,14 @@
       color: rgb(88, 225, 223);
       font-size: 16px;
       font-weight: bold;
-      margin-left: 20px;
+      margin-right: 10px;
+      margin-left: 10px;
+      margin-top: 20px;
+      @media (min-width: 768px) {
+        margin-left: 20px;
+        margin-top: 0;
+      }
+
       &:hover {
         background-color: rgb(29, 29, 29);
         transform: scale(1.05);

@@ -1,9 +1,15 @@
 .favorites {
-  background-color: rgb(28, 27, 27);
-  width: 30vw;
-  min-width: 350px;
-  padding: 10px;
-  min-height: calc(100vh - 554px);
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(28, 27, 27);
+    width: 30vw;
+    min-width: 350px;
+    padding: 10px;
+    min-height: calc(100vh - 554px);
+  }
+
   &__subgroup {
     display: flex;
     justify-content: center;

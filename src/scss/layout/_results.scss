@@ -1,6 +1,12 @@
 .results {
-  width: 70vw;
-  min-width: 350px;
+  width: 100vw;
+  min-height: calc(100vh - 588px);
+  @media (min-width: 768px) {
+    width: 70vw;
+    min-width: 350px;
+    min-height: calc(100vh - 530px);
+  }
+
   &__title {
     border-bottom: 1px solid rgb(88, 225, 223);
     &--subtitle {
