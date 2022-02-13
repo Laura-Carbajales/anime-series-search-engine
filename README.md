@@ -26,7 +26,7 @@
 
 [View the project](https://laura-carbajales.github.io/anime-series-search-engine/)
 
-...
+The exercise consisted of developing a web application to search for anime series, which allows us to mark the series as favorites and save them in local storage. When clicking on the Search button, the application must connect to the API and return a list of results corresponding to the search. In addition, the exercise also has a responsive layout part with HTML and Sass.
 
 ---
 
